@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC:400,600,700,900" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./style/common.css" media="screen,projection" type="text/css">
+
+    <link rel="icon" type="image/png" href=".././images/favicon.png" />
+    <title>Acces MJ</title>
+</head>
+<body>
+<div class="row img">
+    <div class="hidden-xs hidden-sm col-md-offset-2 col-md-4">
+        <img src="./images/bandeau.jpg" class="img-responsive center-block" style="size: auto">
+    </div>
+    <div class="col-xs-4 center">
+        <h3><a href="index.php">Présentation</a></h3>
+    </div>
+    <div class="col-xs-4 center">
+        <h3><a href="form.php">Recrutement</a></h3>
+    </div>
+    <div class="col-xs-4 center">
+        <h3><a href="admin.php">Bar des MJ</a></h3>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-offset-4 col-xs-4 MainC center">
+            <div class="row">
+                <div class="col img top">
+                    <h1>Connexion</h1>
+                    <form method="post" action="check/checkAdmin.php" enctype="multipart/form-data">
+                </div>
+                <div class="col img top">
+                    <?php if (isset($_SESSION['error'])) {
+                        echo "Mauvais identifiants";
+                    }?>
+                </div>
+                <div class="col img top">
+                    <label for="login">Nom :</label>
+                </div>
+                <div class="col img">
+                    <input id="login" name="login" type="text" placeholder="Nom" required="true"
+                           value="<?php if (isset ($_GET['login'])) {
+                               echo $_GET['login'];
+                           } ?>">
+                </div>
+                <div class="col img top">
+                    <label for="password">Token :</label><br>
+                </div>
+                <div class="col img">
+                    <input id="password" name="pw" type="password" placeholder="Token"><br>
+                </div>
+                <div class="col top img">
+                    <input type="submit" value="Entrer">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

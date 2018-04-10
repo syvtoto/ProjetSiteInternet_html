@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC:400,600,700,900" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./style/common.css" media="screen,projection" type="text/css">
+
+    <link rel="icon" type="image/png" href=".././images/favicon.png" />
+    <title>Recrutement</title>
+</head>
+<body>
+<div class="row img">
+    <div class="hidden-xs hidden-sm col-md-offset-2 col-md-4">
+        <img src="./images/bandeau.jpg" class="img-responsive center-block" style="size: auto">
+    </div>
+    <div class="col-xs-4 center">
+        <h3><a href="index.php">Présentation</a></h3>
+    </div>
+    <div class="col-xs-4 center">
+        <h3><a href="form.php">Recrutement</a></h3>
+    </div>
+    <div class="col-xs-4 center">
+        <h3><a href="admin.php">Bar des MJ</a></h3>
+    </div>
+</div>
+<form method="post" action="check/checkForm.php">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-8 MainC">
+                <div class="row">
+                    <div class="col-xs-12 center">
+                        <h2>Bureaux des Recrutements</h2>
+                    </div>
+                    <div class="col-xs-12 center img">
+                    </div>
+                    <div class="col-xs-offset-3  col top left">
+                        <input type="radio" id="M" name="civ" value="M"> <label for="M">M</label>
+                        <input type="radio" id="Mme" name="civ" value="Mme"> <label for="Mme">Mme</label>
+                        <input type="radio" id="Mlle" name="civ" value="Mlle"> <label for="Mlle">Mlle</label>
+                    </div>
+                    <div class="col-xs-offset-3  col top left">
+                        <label for="nom">Entrez votre nom :</label>
+                        <input type="text" id="nom" name="nom" value="<?php if (isset ($_SESSION['nom'])) {
+                            echo $_SESSION['nom'];
+                        } ?>">
+                    </div>
+                    <div class="col-xs-offset-3  col top left">
+                        <label for="prenom">Entrez votre prenom :</label>
+                        <input type="text" id="prenom" name="prenom"
+                               value="">
+                    </div>
+                    <div class="col-xs-offset-3  col top left">
+                        <label for="adresse">Entrez votre Adresse :</label>
+                        <input type="text" id="adresse" name="adresse"
+                               value="">
+                    </div>
+                    <div class="col-xs-offset-3  col top left">
+                        <label for="cp">Entrez votre code postal :</label>
+                        <input type="text" id="cp" name="cp" maxlength="5" size="5"
+                               value="">
+                    </div>
+                    <div class="col-xs-offset-3  col top left">
+                        <label for="ville">Entrez votre ville :</label>
+                        <input type="text" id="ville" name="ville"
+                               value="">
+                    </div>
+                    <div class="col-xs-offset-3  col top left">
+                        <label for="dateNaissance">Votre date de naissance :</label>
+                        <input type="date" id="dateNaissance" name="dateNaissance"
+                               value="">
+                    </div>
+                    <div class="col-xs-offset-3  col top left">
+                        <label for="email">Entrez votre adresse mail :</label>
+                        <input type="email" id="email" name="email" size="25"
+                               value="">
+                    </div>
+                    <div class="col-xs-offset-3  col-xs-3 top left">
+                        <h5>Êtes-vous membre ?</h5>
+                    </div>
+                    <div class="col-xs-2 top left">
+                        <input type="radio" id="Oui" name="membre" value="1"> <label for="Oui">Oui</label>
+                    </div>
+                    <div class="col-xs-2 top left">
+                        <input type="radio" id="Non" name="membre" value="0"> <label for="Non">Non</label>
+                    </div>
+                    <div class="col-xs-offset-3 col-xs-6 left center">
+                        <h4>Jeux :</h4>
+                    </div>
+                    <div class="col-xs-offset-2 col-xs-3 top left">
+                        <input name="jeux[]" type="checkbox" id="jdc" value="jeu de carte"> <label
+                                for="jdc">Cartes <img src="./images/miniatures/jeu-de-cartes.jpg"></label>
+                    </div>
+                    <div class="col-xs-3 top left">
+                        <input name="jeux[]" type="checkbox" id="jdp" value="jeu de plateau"> <label
+                                for="jdp">Plateau <img src="./images/miniatures/summonerWar.jpg"</label>
+                    </div>
+                    <div class="col-xs-3 top left">
+                        <input name="jeux[]" type="checkbox" id="jdr" value="jeu de rôle"> <label for="jdr">Jeu
+                            de
+                            Rôle <img src="./images/miniatures/des-jeu-de-roles.jpg"</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 top center img">
+                        <button type="submit">S'enrôler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

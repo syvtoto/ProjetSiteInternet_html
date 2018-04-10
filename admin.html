@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr,en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC:400,600,700,900" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./style/common.css" media="screen,projection" type="text/css">
+
+    <link rel="icon" type="image/png" href=".././images/favicon.png" />
+    <title>Bar des MJ</title>
+</head>
+<body>
+<div class="row img">
+    <div class="hidden-xs hidden-sm col-md-offset-2 col-md-4">
+        <img src="./images/bandeau.jpg" class="img-responsive center-block" style="size: auto">
+    </div>
+    <div class="col-xs-4 center">
+        <h3><a href="index.php">Présentation</a></h3>
+    </div>
+    <div class="col-xs-4 center">
+        <h3><a href="form.php">Recrutement</a></h3>
+    </div>
+    <div class="col-xs-4 center">
+        <h3><a href="admin.php">Bar des MJ</a></h3>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 MainC">
+            <div class="row left top center">
+                <a href="index.html">Retour à la taverne</a>
+            </div>
+            <div class="row left">
+                <div class="center"><h2>Participants à valider</h2></div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Civilité</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Adresse</th>
+                        <th>Code Postal</th>
+                        <th>Ville</th>
+                        <th>Date Naissance</th>
+                        <th>Email</th>
+                        <th>Membre</th>
+                        <th>Jeux</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>echo $inscrit['civilite']</th>
+                        <th>echo $inscrit['nom']</th>
+                        <th>echo $inscrit['prenom']</th>
+                        <th>echo $inscrit['adresse']</th>
+                        <th>echo $inscrit['cp']</th>
+                        <th>echo $inscrit['ville']</th>
+                        <th>echo $inscrit['dateNaissance']</th>
+                        <th>echo $inscrit['email']</th>
+                        <th>echo $inscrit['membre']</th>
+                        <th>echo $inscrit['jeux']</th>
+                        <th>
+                            <form method="get" action="check/validerInscription.php">
+                                <button type="submit" name="valider" value="">Valider</button>
+                                <button type="submit" name="refuser" value="">Refuser</button>
+                            </form>
+                        </th>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="center"><h2>Liste des participants</h2></div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Civilité</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Adresse</th>
+                        <th>Code Postal</th>
+                        <th>Ville</th>
+                        <th>Date Naissance</th>
+                        <th>Email</th>
+                        <th>Membre</th>
+                        <th>Jeux</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>echo $inscrit['civilite']</th>
+                        <th>echo $inscrit['nom']</th>
+                        <th>echo $inscrit['prenom']</th>
+                        <th>echo $inscrit['adresse']</th>
+                        <th>echo $inscrit['cp']</th>
+                        <th>echo $inscrit['ville']</th>
+                        <th>echo $inscrit['dateNaissance']</th>
+                        <th>echo $inscrit['email']</th>
+                        <th>echo $inscrit['membre']</th>
+                        <th>echo $inscrit['jeux']</th>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="center"><h2>Participants refusés</h2></div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Civilité</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Adresse</th>
+                        <th>Code Postal</th>
+                        <th>Ville</th>
+                        <th>Date Naissance</th>
+                        <th>Email</th>
+                        <th>Membre</th>
+                        <th>Jeux</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>echo $inscrit['civilite']</th>
+                        <th>echo $inscrit['nom']</th>
+                        <th>echo $inscrit['prenom']</th>
+                        <th>echo $inscrit['adresse']</th>
+                        <th>echo $inscrit['cp']</th>
+                        <th>echo $inscrit['ville']</th>
+                        <th>echo $inscrit['dateNaissance']</th>
+                        <th>echo $inscrit['email']</th>
+                        <th>echo $inscrit['membre']</th>
+                        <th>echo $inscrit['jeux']</th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
